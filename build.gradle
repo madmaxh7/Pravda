@@ -1,0 +1,41 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.3"
+    }
+}
+
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.3"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '6.8.0'
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.2.2'
+    compile group: 'com.google.guava', name: 'guava', version: '30.0-jre'
+}
+
+allure {
+    version = '2.2.1'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
+test {
+    useTestNG()
+    testLogging.showStandardStreams = true
+}
