@@ -3,11 +3,10 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
   <test name="TestProgect_v3(failed)">
     <classes>
-      <class name="tests.TestAddComputer">
+      <class name="tests.MainPage">
         <methods>
-          <include name="addComputerCheck"/>
-          <include name="startTest"/>
-          <include name="closeDriver"/>
+          <include name="openTheHomePageAndTextChecks"/>
+          <include name="checkTitleMainAndSecondPage"/>
         </methods>
       </class> <!-- tests.TestAddComputer -->
     </classes>
