@@ -38,6 +38,7 @@ public class MainPage extends DriverSetUp {
         Reporter.log("Check that " + url + "page opened");
         Assert.assertTrue(startPage.checkElementExisting(startPage.mainHeadImgPage));
         Reporter.log(url + "page opened");
+        Reporter.log("First News is visible" + startPage.checkFirstNews());
         String expectedResult = startPage.getElementTest(startPage.firstFrame);
         Reporter.log("Click first element");
         startPage.clickFirstNews();
