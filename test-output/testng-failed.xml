@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test name="TestProgect_v3(failed)">
+    <classes>
+      <class name="tests.TestAddComputer">
+        <methods>
+          <include name="addComputerCheck"/>
+          <include name="startTest"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.TestAddComputer -->
+    </classes>
+  </test> <!-- TestProgect_v3(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
