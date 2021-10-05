@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.MainPage" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-12-09T09:59:11" hostname="DESKTOP-1C5IM9V" time="0.993">
+<testsuite name="tests.MainPage" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-10-05T08:01:38" hostname="HOME-PC" time="9.767">
   <properties/>
-  <testcase name="AddComputerButton" classname="tests.MainPage" time="0.626"/>
-  <testcase name="openTheHomePage" classname="tests.MainPage" time="0.193"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="Test_1_OpenTheHomePageAndTextChecks" classname="tests.MainPage" time="3.613"/>
+  <testcase name="Test_2_CheckTitleMainAndSecondPage" classname="tests.MainPage" time="6.07"/>
+  <system-out><![CDATA[Main url is: https://www.pravda.com.ua/
+openPagePravda
+Main url is: https://www.pravda.com.ua/
+openPagePravda
+Text is: Північний потік-2: Данія дала дозвіл на запуск, Німеччина вимагає гарантій 
+First News is visible
+Text is: Північний потік-2: Данія дала дозвіл на запуск, Німеччина вимагає гарантій 
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

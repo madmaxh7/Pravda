@@ -1,6 +1,7 @@
 package tests;
 
 import general.DriverSetUp;
+import org.openqa.selenium.WebElement;
 import pages.SecondPage;
 import pages.StartPage;
 
@@ -20,9 +21,10 @@ public class MainPage extends DriverSetUp {
     }
 
     @Test //check main page load, and internet connection is allow
-    public void openTheHomePageAndTextChecks() {
+    public void Test_1_OpenTheHomePageAndTextChecks() {
         StartPage startPage = new StartPage(driver);
         String url = startPage.getMainUrl();
+        System.out.println("Main url is: " + url);
         startPage.openPagePravda();
         Reporter.log("Check that " + url + "page opened");
         Assert.assertTrue(startPage.checkElementExisting(startPage.mainHeadImgPage));
@@ -30,22 +32,26 @@ public class MainPage extends DriverSetUp {
     }
 
     @Test
-    public void checkTitleMainAndSecondPage () {
+    public void Test_2_CheckTitleMainAndSecondPage () {
         StartPage startPage = new StartPage(driver);
         SecondPage secondPage = new SecondPage(driver);
         String url = startPage.getMainUrl();
+        System.out.println("Main url is: " + url);
         startPage.openPagePravda();
         Reporter.log("Check that " + url + "page opened");
         Assert.assertTrue(startPage.checkElementExisting(startPage.mainHeadImgPage));
         Reporter.log(url + "page opened");
         Reporter.log("First News is visible" + startPage.checkFirstNews());
         String expectedResult = startPage.getElementTest(startPage.firstFrame);
+        System.out.println("First News is visible");
         Reporter.log("Click first element");
         startPage.clickFirstNews();
+        secondPage.selectSecondTabAndCloseOther();
+        WebElement elementLocator = secondPage.checkSecondPageTabTitle(secondPage.secondPageTabTitle);
         Reporter.log("Check that " + url + "page opened");
-        Assert.assertTrue(startPage.checkElementExisting(secondPage.secondHeadImgPage));
-        String actualResult = secondPage.getElementTest(secondPage.secondPageTitle);
-        Assert.assertTrue(expectedResult.equals(actualResult));
+        Assert.assertTrue(startPage.checkElementExisting(secondPage.secondHeadTitle));
+        String actualResult = secondPage.getElementTest(elementLocator);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @AfterTest
