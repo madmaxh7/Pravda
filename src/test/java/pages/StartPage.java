@@ -21,6 +21,7 @@ public class StartPage extends GeneralPageMethods {
 
     public void openPagePravda(){
         driver.get(urlStartPage);
+        System.out.println("openPagePravda");
         waitElementVisible(mainHeadImgPage);
     }
     public boolean checkFirstNews(){
@@ -32,6 +33,7 @@ public class StartPage extends GeneralPageMethods {
     public String getMainUrl() {
         return urlStartPage;
     }
+
     public void clickFirstNews() {
         driver.get(urlStartPage);
         clickElement(firstFrame);

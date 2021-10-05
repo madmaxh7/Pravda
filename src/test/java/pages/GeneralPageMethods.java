@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -19,16 +18,18 @@ public class GeneralPageMethods {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
     public String getElementTest(WebElement element) {
         String textElement = element.getText();
+        System.out.println("Text is: " + textElement);
         return textElement;
     }
 
-    public boolean checkElementExisting(WebElement element){
+    public boolean checkElementExisting(WebElement element) {
         return element.isDisplayed();
     }
 
-    public void clickElement (WebElement element) {
+    public void clickElement(WebElement element) {
         waitElementVisible(element);
         element.click();
     }

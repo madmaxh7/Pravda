@@ -1,11 +1,9 @@
-pages/ComputersPage.java
- pages.ComputersPage
+pages/SecondPage.java
+ pages.SecondPage
 pages/GeneralPageMethods.java
  pages.GeneralPageMethods
 pages/StartPage.java
  pages.StartPage
-tests/TestAddComputer.java
- tests.TestAddComputer
 tests/MainPage.java
  tests.MainPage
 general/DriverSetUp.java
